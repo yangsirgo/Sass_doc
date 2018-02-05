@@ -8,7 +8,9 @@ ruby的下载地址：
 
 ### Sass安装 ###
 安装完ruby，请在菜单开始栏中找到ruby，打开Start Command Prompt with Ruby，
+
 ![打开命令](https://i.imgur.com/ZEjTa22.png)
+
 
 然后在命令行中输入：
     
@@ -26,15 +28,68 @@ ruby的下载地址：
     `
 	sass -v
 	`
+## webstorm配置 ##
+### 检查是否安装了sass ###
+
+利用sass-v 检查是否安装sass，出现版本号即为安装成功。
+
+![](https://i.imgur.com/GGk0sCq.png)
+
+### 安装File Watchers ###
+
+![File Watchers](https://i.imgur.com/G636eaD.png)
+
+### 新建watcher ###
+
+![新建watcher](https://i.imgur.com/qv0C5T9.png)
+
+### watcher配置 ###
+
+![watcher配置](https://i.imgur.com/5pqwnii.png)
+
+为了能在浏览器中调试使用，需要生成.css.map文件，可以直接在chrome浏览器中调试scss文件样式。
+
+1. Arguments:配置编译后的文件的输出路径:
+
+    
+	`
+	--no-cache --update  --sourcemap --watch $FileName$:$FileNameWithoutExtension$.css --trace
+	`
+2. Output paths to refresh:
+
+    `
+	$FileNameWithoutExtension$.css:$FileNameWithoutExtension$.css.map
+	`
+配置截图：
+
+![配置截图](https://i.imgur.com/wXjgAqO.png)
 
 
+#### 配置常见错误解析 ####
+报错，webstorm会弹出cmd界面，像这样：
+
+![cmd界面](https://i.imgur.com/eDDwznp.png)
+
+
+
+- incompatible character encodings: GBK and UTF-8
+	项目名或者样式文件名可能带有中文，检查一下是否有中文的命名！~ 需要仔细检查。或者试一下增加
+
+	`@charset 'UTF-8'
+	`
+-   Use --trace for backtrace.
+	在angument 菜单下加上--trace
+	如下图：
+	![报错图片](https://i.imgur.com/P3YovYw.png)
+ 
 
 
 https://www.sassmeister.com/ 
 在线编译scss网站.
 
-scss 不能直接通过link标签引入文件,只不过是预处理工具,需要编译成sa
-css的文件引入.
+scss 不能直接通过link标签引入文件,只不过是预处理工具,需要编译成css的文件引入.
+文件后缀是.scss
+
 
 ## 语法
 以美元符号"$"开头
