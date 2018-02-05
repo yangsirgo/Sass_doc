@@ -1,3 +1,35 @@
+## 安装 ##
+
+### ruby安装 ###
+ruby的下载地址：
+[http://rubyinstaller.org/downloads/](http://rubyinstaller.org/downloads/ "ruby下载地址")
+
+![勾选第二项](https://i.imgur.com/AX5GiFr.png)
+
+### Sass安装 ###
+安装完ruby，请在菜单开始栏中找到ruby，打开Start Command Prompt with Ruby，
+![打开命令](https://i.imgur.com/ZEjTa22.png)
+
+然后在命令行中输入：
+    
+	`
+	gem install sass
+	`
+按回车确认，等待一段时间会提示你sass安装成功。
+如果要安装beta版本（测试版本），可以在命令行中输入：
+
+   
+	gem install sass --pre
+
+查看sass版本的命令：
+
+    `
+	sass -v
+	`
+
+
+
+
 https://www.sassmeister.com/ 
 在线编译scss网站.
 
